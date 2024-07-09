@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --primary-color: rgba(140, 42, 219, 0.801);
+    --primary-color-dark:rgb(186, 136, 233);
+    --text-dark:#111827;
+    --text-light:#5a4572fd;
+    --white: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn{
+    padding: 1rem 1rem;
+    outline:none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+body {
+    font-family:"Roboto", sans-serif ;
+}
+.container{
+  max-width: 1200px; 
+  margin: auto; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+nav {
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+
+}
+.linkes {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+.linkes a {
+  text-decoration: none;  
+  color:var(--text-light);
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 0.3s;
+  
+
+}
+.linkes a:hover {
+  color: var(--primary-color-dark);  
+}
+.header {
+   padding: 0 1rem; 
+   flex: 1;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+   align-items: center;
+
+}
+.content {
+    padding: 0 3rem;
+}
+.content h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+.content h1 span {
+ font-weight: 400; 
+
+}
+.content p {
+  margin-bottom: 2rem ;  
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+.image {
+    position: relative;
+    text-align: center;
+    isolation: isolate;
+}
+.image__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50% , -50%);
+   height: 430px;
+   width: 430px;
+   background-color: var(--primary-color);
+   border-radius: 100%;
+   z-index: -1;
+
+
+}
+.image img {
+    width: 100%;
+    max-width: 450px;
+}
+@media (width < 900px) {
+   .linkes {
+    display: none;
+
+   } 
+   .header {
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+   }
+   .content {
+    text-align: center;
+
+   }
+   .image {
+    grid-area: 1/1/2/2;
+   }
+}
